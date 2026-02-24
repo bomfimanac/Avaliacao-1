@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,11 @@
     public $velocidade = 0;
 
     //Funções
+    
+    public function marca() {
+        echo "Marca do carro é: " . $this->marca;
+    }
+    
     public function acelerar() {
         $this->velocidade += 10;
         echo " O carro acelerou. Velocidade: " . $this->velocidade . "Km/h  <br>";
@@ -33,8 +38,10 @@
 }
     //Objeto
     $meuCarro = new Carro();
+    $meuCarro->marca = "Mercedes <br>";
 
     //Métodos
+    $meuCarro->marca();
     $meuCarro->acelerar();
     $meuCarro->acelerar();
     $meuCarro->frear();
